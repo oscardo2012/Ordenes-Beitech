@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Web Ordenes</title>
+
+		<!-- Estilos -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="font-awesome/css/fontawesome.css">
+		<link rel="stylesheet" href="font-awesome/css/brands.css">
+		<link rel="stylesheet" href="font-awesome/css/solid.css">
+		<link rel="stylesheet" href="css/plugins/datapicker/datepicker3.css">
+		<link rel="stylesheet" href="css/plugins/dataTables/dataTables.bootstrap.css">
+		<link rel="stylesheet" href="css/plugins/dataTables/dataTables.responsive.css">
+		<link rel="stylesheet" href="css/plugins/dataTables/dataTables.tableTools.min.css">
+
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/estilos.css">
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/vue/axios.min.js"></script>
+		<script type="text/javascript" src="js/vue/vue.js"></script>
+		<script type="text/javascript" src="js/vue/vue-router.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- Plugins -->
+		<script type="text/javascript" src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+		<script type="text/javascript" src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="js/inspinia.js"></script>
+		<script type="text/javascript" src="js/plugins/pace/pace.min.js"></script>
+		<script type="text/javascript" src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+		<script type="text/javascript" src="js/plugins/dataTables/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="js/plugins/dataTables/dataTables.responsive.js"></script>
+		<script type="text/javascript" src="js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+
+
+	</head>
+	<body>
+		<div id="app">
+				<router-view @mostrar-modal="actualizarEstadoModal"></router-view>
+				<div class="cargando" id="modal-cargando" v-show="modalMostrar">
+					<img src="imagenes/cargando.gif" alt="" />
+				</div>
+		</div>
+	</body>
+
+	<!-- Componentes Vue.js -->
+	<script type="text/javascript" src="js/vue/componentes/CrearOrdenComponente.js"></script>
+	<script type="text/javascript" src="js/vue/componentes/ListarOrdenesComponente.js"></script>
+	<script type="text/javascript" src="js/vue/slots/PlantillaPrincipalSlot.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</html>
