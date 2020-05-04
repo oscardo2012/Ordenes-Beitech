@@ -46,10 +46,10 @@ class CustomerController extends Controller
 		}
 		else{
 			$ordenes = Order::where('customer_id',$req->customer_id)
-								->whereBetween('creation_date',[$req->start_date,$req->end_date])
-			->with('details')
-			->orderBy('creation_date', 'asc')
-			->get();
+							->whereBetween('creation_date',[$req->start_date,$req->end_date])
+							->with('details')
+							->orderBy('creation_date', 'asc')
+							->get();
 			if($ordenes->count() <= 0){
 				//No se encontraron ordenes para el cliente en el rango de fechas
 				$codigoRespuesta = 200;
@@ -68,6 +68,6 @@ class CustomerController extends Controller
 				];
 			}
 		}
-		return response()->json($jsonRespuesta, $codigoRespuesta);
+		return response()->json($jsonRespuesta, $codigoRespuesta)->header("Access-Control-Allow-Origin",  "*");
 	}
 }
