@@ -201,7 +201,6 @@ const CrearOrden = {
 					else{
 						alert(datosRespuesta['error-mensaje']);
 					}
-					console.log(datosRespuesta);
 					this.mostrarModal(false);
 					
 				})
