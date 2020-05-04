@@ -46,7 +46,7 @@ class OrderController extends Controller
 				$nuevaOrden->save();
 				$valorTotalOrden = 0;
 				foreach($req->productos as $indice => $producto){
-					$valorTotalOrden += $producto['price'];
+					$valorTotalOrden += ($producto['price'] *$producto['quantity']);
 					$nuevoDetalleOrden = new OrderDetail();
 					$nuevoDetalleOrden->order_id = $nuevaOrden->order_id;
 					$nuevoDetalleOrden->product_id = $producto['product_id'];
